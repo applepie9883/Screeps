@@ -8,19 +8,14 @@
  
   module.exports = function(creep)
  {
-	 if (creep.harvest(Game.getObjectById(creep.memory.destID)) == OK)
+	 if (creep.harvest(Game.getObjectById(creep.memory.destID)) != OK)
 	 {
-		 delete creep.memory.destPath;
-	 }
-	 else
-	 {
-		 var didMove = creep.moveByPath_e(creep.memory.destPath);
+		 var didMove = creep.moveTo(Game.getObjectById(creep.memory.destID));
 		 
 		 if (didMove != OK && didMove != ERR_TIRED)
 		 {
 			 var sources = creep.room.find(FIND_SOURCES);
 			 creep.memory.destID = sources[0].id;
-			 creep.memory.destPath = creep.room.findPath(creep.pos, sources[0].pos);
 		 }
 	}
 }
