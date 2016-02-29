@@ -8,7 +8,12 @@
 
 module.exports = function(creep)
 {
-	var sources = creep.room.find(FIND_SOURCES);
+	
+	if (creep.memory.destID != null)
+	{
+		creep.memory.destID = creep.room.find(FIND_SOURCES)[0].ID;
+	}
+	
 	creep.moveTo(sources[0]);
 	creep.harvest(sources[0]);
 }
