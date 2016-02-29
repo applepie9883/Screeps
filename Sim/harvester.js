@@ -12,7 +12,7 @@ module.exports = function(creep)
 	
 	if (destID == null)
 	{
-		destID = creep.room.find(FIND_SOURCES).ID;
+		destID = creep.room.find(FIND_SOURCES)[0].ID;
 	}
 	
 	creep.moveTo(Game.getObjectById(destID));
