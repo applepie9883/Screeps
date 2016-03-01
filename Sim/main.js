@@ -13,10 +13,9 @@ function getUsedCpu()
     return Game.rooms.sim ? performance.now() - usedOnStart : Game.getUsedCpu();
 }
 
-var cpuUsageEnd = 0;
-
 var usedOnStart = 0;
 usedOnStart = getUsedCpu();
+var cpuUsageEnd = 0;
 
 // The next few lines are temporary
 //Game.spawns.Spawn1.createCreep([WORK, MOVE], null, {role: 'harvester'});
@@ -26,6 +25,8 @@ usedOnStart = getUsedCpu();
 //Game.spawns.Spawn1.createCreep([ATTACK, MOVE], null, {role: 'guarder'});
 //Game.spawns.Spawn1.createCreep([MOVE, ATTACK, ATTACK, MOVE], null, {role: 'guarder'});
 //Game.spawns.Spawn1.createCreep([MOVE, ATTACK, ATTACK, MOVE], null, {role: 'dead'});
+
+usedOnStart = getUsedCpu();
 
 for(var name in Game.creeps)
 {
