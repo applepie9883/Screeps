@@ -10,7 +10,7 @@ var guarder = require('guarder');
 
 function getUsedCpu()
 {
-    return Game.rooms.sim ? performance.now() - usedOnStart : Game.getUsedCpu();
+	return Game.rooms.sim ? performance.now() - usedOnStart : Game.getUsedCpu();
 }
 
 var usedOnStart = 0;
@@ -33,23 +33,23 @@ for(var name in Game.creeps)
 	
 	if (creep.memory.role == 'harvester')
 	{
-	    harvester(creep);
+		harvester(creep);
 	}
 	else if (creep.memory.role == 'gatherer')
 	{
-	    gatherer(creep);
+		gatherer(creep);
 	}
 	else if (creep.memory.role == 'builder')
 	{
-	    builder(creep);
+		builder(creep);
 	}
 	else if (creep.memory.role == 'guarder')
 	{
-	    guarder(creep);
+		guarder(creep);
 	}
 	else if (creep.memory.role == 'dead')
 	{
-	    creep.suicide();
+		creep.suicide();
 	}
 }
 
