@@ -14,7 +14,6 @@ function getUsedCpu()
 }
 
 var usedOnStart = 0;
-usedOnStart = getUsedCpu();
 var cpuUsageEnd = 0;
 
 // The next few lines are temporary
