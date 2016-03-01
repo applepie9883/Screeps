@@ -8,15 +8,15 @@
 
 module.exports = function(creep)
 {
-	var destID = creep.memory.destID;
+	var destID = creep.memory.destId;
 	
 	if (destID == null)
 	{
-		destID = creep.room.find(FIND_SOURCES)[0].ID;
+		destID = creep.room.find(FIND_SOURCES)[0].id;
 	}
 	
-	creep.moveTo(Game.getObjectById(destID));
-	creep.harvest(Game.getObjectById(destID));
+	creep.moveTo(Game.getObjectById(destId));
+	creep.harvest(Game.getObjectById(destId));
 }
 
 
