@@ -6,7 +6,9 @@
 * var mod = require('guarder'); // -> 'a thing'
 */
 
-module.exports = function(creep)
+module.exports = guarder;
+
+function guarder(creep)
 {
 	var targets = creep.room.find(FIND_HOSTILE_CREEPS);
 	
