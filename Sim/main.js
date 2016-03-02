@@ -50,6 +50,7 @@ for(var name in Game.creeps)
 	else if (creep.memory.role == 'dead')
 	{
 		creep.suicide();
+		creep.memory = null;
 	}
 }
 
