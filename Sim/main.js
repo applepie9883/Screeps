@@ -23,7 +23,7 @@ var cpuUsageEnd = 0;
 //Game.spawns.Spawn1.createCreep([CARRY, CARRY, MOVE, MOVE], null, {role: 'gatherer'});
 //Game.spawns.Spawn1.createCreep([ATTACK, MOVE], null, {role: 'guarder'});
 //Game.spawns.Spawn1.createCreep([MOVE, ATTACK, ATTACK, MOVE], null, {role: 'guarder'});
-//Game.spawns.Spawn1.createCreep([MOVE, ATTACK, ATTACK, MOVE], null, {role: 'dead'});
+//Game.spawns.Spawn1.createCreep([HEAL], null, {role: 'dead'});
 
 usedOnStart = getUsedCpu();
 
