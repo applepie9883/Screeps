@@ -6,7 +6,9 @@
 * var mod = require('builder'); // -> 'a thing'
 */
 
-module.exports = function(creep)
+module.exports = builder;
+
+function builder(creep)
 {
 	if(creep.carry.energy == 0)
 	{
