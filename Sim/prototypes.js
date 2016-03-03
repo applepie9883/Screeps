@@ -10,6 +10,30 @@ module.exports = initializePrototypes();
 
 function initializePrototypes()
 {
+	Room.prototype.memorizeSources = function(shouldOverwrite)
+    {
+        shouldOverwrite = shouldOverwrite || false;
+        
+        if (shouldOverwrite || this.memory.sourceIds == null)
+	    {
+	        console.log(`${this.name}: memorizing sources`);
+	        var sources = this.find(FIND_SOURCES);
+	        
+	        this.memory.sourceIds = [];
+	        
+	        for (var i = 0; i < sources.length; i++)
+	        {
+	            this.memory.sourceIds.push(sources[i].id);
+	        }
+	        
+	        console.log(`Done: ${this.memory.sourceIds}`);
+	        
+	        return true;
+	    }
+	    
+	    return false;
+    };
+    
 	/*
 	Creep.prototype.setPath_m = function(path)
 	{
