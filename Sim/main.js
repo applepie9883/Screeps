@@ -1,7 +1,7 @@
 // Your code goes here...
 
-//require('global');
-//require('prototypes');
+require('global');
+require('prototypes');
 
 var harvester = require('harvester');
 var gatherer = require('gatherer');
