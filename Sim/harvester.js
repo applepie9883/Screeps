@@ -14,7 +14,9 @@ function harvester(creep)
 	
 	if (destId == null)
 	{
-		destId = creep.room.find(FIND_SOURCES)[0].id;
+		creep.room.memorizeSources();
+	    
+	    destId = creep.room.memory.sourceIds[0];
 		creep.memory.destId = destId;
 	}
 	
