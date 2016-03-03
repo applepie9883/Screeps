@@ -14,19 +14,19 @@ function initializePrototypes()
     {
         shouldOverwrite = shouldOverwrite || false;
         
-        if (shouldOverwrite || this.memory.sourceIds == null)
+        if (shouldOverwrite || this.memory sources == null)
 	    {
 	        console.log(`${this.name}: memorizing sources`);
-	        var sources = this.find(FIND_SOURCES);
+	        var sourcesFound = this.find(FIND_SOURCES);
 	        
-	        this.memory.sourceIds = [];
+	        this.memory.sources = [];
 	        
-	        for (var i = 0; i < sources.length; i++)
+	        for (var i = 0; i < sourcesFound.length; i++)
 	        {
-	        	this.memory.sourceIds[i] = sources[i].id;
+	        	this.memory.sources[i] = {id: sourcesFound[i].id, x: sourcesFound[i].pos.x, y: sourcesFound[i].pos.y};
 	        }
 	        
-	        console.log(`Done: ${this.memory.sourceIds}`);
+	        console.log(`Done: ${this.memory.sources}`);
 	        
 	        return true;
 	    }
