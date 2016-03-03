@@ -23,7 +23,7 @@ function initializePrototypes()
 	        
 	        for (var i = 0; i < sourcesFound.length; i++)
 	        {
-	        	this.memory.sources[i] = {id: sourcesFound[i].id, x: sourcesFound[i].pos.x, y: sourcesFound[i].pos.y};
+	        	this.memory.sources[i] = {id:sourcesFound[i].id, x:sourcesFound[i].pos.x, y:sourcesFound[i].pos.y};
 	        }
 	        
 	        console.log(`Done: ${this.memory.sources}`);
