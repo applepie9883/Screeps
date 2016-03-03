@@ -23,7 +23,7 @@ function initializePrototypes()
 	        
 	        for (var i = 0; i < sources.length; i++)
 	        {
-	            this.memory.sourceIds.push(sources[i].id);
+	        	this.memory.sourceIds[i] = sources[i].id);
 	        }
 	        
 	        console.log(`Done: ${this.memory.sourceIds}`);
