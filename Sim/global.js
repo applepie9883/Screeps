@@ -15,14 +15,14 @@ function defineGlobalVariables()
 	global.creepParts = {
 		harvester:
 		[
-			{level:1, cost:150, parts:[WORK, MOVE]},
-			{level:2, cost:250, parts:[WORK, WORK, MOVE]},
-			{level:3, cost:400, parts:[WORK, WORK, WORK, MOVE, MOVE]},
-			{level:4, cost:650, parts:[WORK, WORK, WORK, WORK, WORK, MOVE, MOVE, MOVE]}
+			{level:0, cost:150, parts:[WORK, MOVE]},
+			{level:1, cost:250, parts:[WORK, WORK, MOVE]},
+			{level:2, cost:400, parts:[WORK, WORK, WORK, MOVE, MOVE]},
+			{level:3, cost:650, parts:[WORK, WORK, WORK, WORK, WORK, MOVE, MOVE, MOVE]}
 		],
 		gatherer:
 		[
-			{level:1, cost:100, parts:[CARRY, MOVE]},
+			{level:0, cost:100, parts:[CARRY, MOVE]},
 			{}
 		]
 	};
