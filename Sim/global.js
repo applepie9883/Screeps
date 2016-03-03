@@ -23,7 +23,7 @@ function defineGlobalVariables()
 		gatherer:
 		[
 			{level:0, cost:100, parts:[CARRY, MOVE]},
-			{}
+			{level:1, cost:200, parts:[CARRY, CARRY, MOVE, MOVE]}
 		]
 	};
 }
