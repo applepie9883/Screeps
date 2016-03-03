@@ -14,7 +14,7 @@ function initializePrototypes()
     {
         shouldOverwrite = shouldOverwrite || false;
         
-        if (shouldOverwrite || this.memory sources == null)
+        if (shouldOverwrite || this.memory.sources == null)
 	    {
 	        console.log(`${this.name}: memorizing sources`);
 	        var sourcesFound = this.find(FIND_SOURCES);
