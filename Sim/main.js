@@ -17,10 +17,8 @@ var usedOnStart = 0;
 var cpuUsageEnd = 0;
 
 // The next few lines are temporary
-//Game.spawns.Spawn1.createCreep([WORK, MOVE], null, {role: 'harvester'});
-//Game.spawns.Spawn1.createCreep([WORK, WORK, MOVE], null, {role: 'harvester'});
-//Game.spawns.Spawn1.createCreep([CARRY, MOVE], null, {role: 'gatherer'});
-//Game.spawns.Spawn1.createCreep([CARRY, CARRY, MOVE, MOVE], null, {role: 'gatherer'});
+//Game.spawns.Spawn1.createCreep(creepParts.harvester[1].parts, null, {role: 'harvester'});
+//Game.spawns.Spawn1.createCreep(creepParts.gatherer[1].parts, null, {role: 'gatherer'});
 //Game.spawns.Spawn1.createCreep([ATTACK, MOVE], null, {role: 'guarder'});
 //Game.spawns.Spawn1.createCreep([MOVE, ATTACK, ATTACK, MOVE], null, {role: 'guarder'});
 //Game.spawns.Spawn1.createCreep([HEAL], null, {role: 'dead'});
