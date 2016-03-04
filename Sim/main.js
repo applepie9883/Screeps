@@ -1,12 +1,8 @@
 // Your code goes here...
 
 require('global');
-require('prototypes');
-
-var harvester = require('harvester');
-var gatherer = require('gatherer');
-var builder = require('builder');
-var guarder = require('guarder');
+require('room');
+require('creep');
 
 function getUsedCpu()
 {
@@ -17,8 +13,8 @@ var usedOnStart = 0;
 var cpuUsageEnd = 0;
 
 // The next few lines are temporary
-//Game.spawns.Spawn1.createCreep(creepParts.harvester[1].parts, null, {role: 'harvester'});
-//Game.spawns.Spawn1.createCreep(creepParts.gatherer[1].parts, null, {role: 'gatherer'});
+//Game.spawns.Spawn1.createCreep(creepParts.harvester[0].parts, null, {role: 'harvester'});
+//Game.spawns.Spawn1.createCreep(creepParts.gatherer[0].parts, null, {role: 'gatherer'});
 //Game.spawns.Spawn1.createCreep([ATTACK, MOVE], null, {role: 'guarder'});
 //Game.spawns.Spawn1.createCreep([MOVE, ATTACK, ATTACK, MOVE], null, {role: 'guarder'});
 //Game.spawns.Spawn1.createCreep([HEAL], null, {role: 'dead'});
@@ -27,29 +23,7 @@ usedOnStart = getUsedCpu();
 
 for(var name in Game.creeps)
 {
-	var creep = Game.creeps[name];
-	
-	if (creep.memory.role == 'harvester')
-	{
-		harvester(creep);
-	}
-	else if (creep.memory.role == 'gatherer')
-	{
-		gatherer(creep);
-	}
-	else if (creep.memory.role == 'builder')
-	{
-		builder(creep);
-	}
-	else if (creep.memory.role == 'guarder')
-	{
-		guarder(creep);
-	}
-	else if (creep.memory.role == 'dead')
-	{
-		creep.suicide();
-		creep.memory = null;
-	}
+	Game.creeps[name].work();
 }
 
 cpuUsageEnd = getUsedCpu();
