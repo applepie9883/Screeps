@@ -31,7 +31,6 @@ function initialize()
 		else if (this.memory.role == 'dead')
 		{
 			this.suicide();
-			this.memory = null;
 		}
     };
 	
