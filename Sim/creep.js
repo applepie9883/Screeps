@@ -45,7 +45,7 @@ function initialize()
 			this.memory.destId = destId;
 		}
 		
-		this.moveToAndHarvest(Game.getObjectById(destId);
+		this.moveToAndHarvest(Game.getObjectById(destId));
 	};
 	
 	Creep.prototype.moveToAndHarvest = function(source)
@@ -69,7 +69,7 @@ function initialize()
 		}
 	};
 	
-	Creep.prototype.doGuarder = function(this)
+	Creep.prototype.doGuarder = function()
 	{
 		var targets = this.room.find(FIND_HOSTILE_CREEPS);
 	
@@ -89,7 +89,7 @@ function initialize()
 		}
 	};
 	
-	Creep.prototype.doBuilder = function(this)
+	Creep.prototype.doBuilder = function()
 	{
 		if(this.carry.energy == 0)
 		{
