@@ -10,7 +10,7 @@ module.exports = initialize();
 
 function initialize()
 {
-	Creep.prototype.work = function()
+	Creep.prototype.doStuff = function()
     {
         if (this.memory.role == 'harvester')
 		{
@@ -49,8 +49,8 @@ function initialize()
 	
 	Creep.prototype.moveToAndHarvest = function(source)
 	{
-		this.moveTo(source);
-		this.harvest(source);
+		if (this.harvest(source) == ERR_NOT_IN_RANGE) 
+			this.moveTo(source);
 	};
 	
 	Creep.prototype.doGatherer = function()
@@ -74,8 +74,15 @@ function initialize()
 	
 		if (targets.length)
 		{
-		this.moveTo(targets[0]);
-		this.attack(targets[0]);
+		    for (var i = 0; i < targets.length; i++)
+		    {
+		        if (targets[i].owner.username != 'Source Keeper')
+    		    {
+    		        this.moveTo(targets[i]);
+            		this.attack(targets[i]);
+            		break;
+    		    }
+		    }
 		}
 		else
 		{
@@ -84,7 +91,7 @@ function initialize()
 		
 		if (!this.getActiveBodyparts(MOVE))
 		{
-			this.suicide();
+			//this.suicide();
 		}
 	};
 	

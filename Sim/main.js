@@ -1,6 +1,7 @@
 // Your code goes here...
 
 require('global');
+require('spawn');
 require('room');
 require('creep');
 
@@ -23,7 +24,15 @@ usedOnStart = getUsedCpu();
 
 for(var name in Game.creeps)
 {
-	Game.creeps[name].work();
+	Game.creeps[name].doStuff();
+}
+for (var name in Game.rooms)
+{
+	Game.rooms[name].doStuff();
+}
+for (var name in Game.spawns)
+{
+	Game.spawns[name].doStuff();
 }
 
 cpuUsageEnd = getUsedCpu();

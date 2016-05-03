@@ -10,8 +10,6 @@ module.exports = defineGlobalVariables();
 
 function defineGlobalVariables()
 {
-	global.ERR_PATH_BLOCKED = -101;
-	
 	global.creepParts = {
 		harvester:
 		[
